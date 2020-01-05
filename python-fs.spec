@@ -2,8 +2,8 @@
 %global pypi_name fs
 
 Name:           python-%{pypi_name}
-Version:        2.4.8
-Release:        %mkrel 2
+Version:        2.4.11
+Release:        1
 Summary:        Python's filesystem abstraction layer
 Group:          Development/Python
 License:        MIT
@@ -13,7 +13,7 @@ BuildArch:      noarch
 
 BuildRequires:  locales
 
-BuildRequires:  python3-devel
+BuildRequires:  python-devel
 BuildRequires:  python3dist(appdirs)
 BuildRequires:  python3dist(backports.os)
 BuildRequires:  python3dist(mock)
@@ -32,11 +32,11 @@ as your local drive. Write code now, decide later where the data will be
 stored; unit test without writing real files; upload files to the cloud
 without learning a new API; sandbox your file writing code; etc.
 
-%package -n     python3-%{pypi_name}
+%package -n     python-%{pypi_name}
 Summary:        %{summary}
-%{?python_provide:%python_provide python3-%{pypi_name}}
+%{?python_provide:%python_provide python-%{pypi_name}}
 
-%description -n python3-%{pypi_name}
+%description -n python-%{pypi_name}
 Work with files and directories in archives, memory, the cloud etc. as easily
 as your local drive. Write code now, decide later where the data will be
 stored; unit test without writing real files; upload files to the cloud
@@ -51,17 +51,17 @@ rm -rf %{pypi_name}.egg-info
 perl -pi -e 's/~=/>=/g' setup.py
 
 %build
-%py3_build
+%py_build
 
 %install
-%py3_install
+%py_install
 
 %check
 export LC_ALL=C.UTF-8
-#{__python3} setup.py test
+#{__python} setup.py test
 
-%files -n python3-%{pypi_name}
+%files -n python-%{pypi_name}
 %license LICENSE
 %doc README.md
-%{python3_sitelib}/%{pypi_name}
-%{python3_sitelib}/%{pypi_name}-%{version}-py?.?.egg-info
+%{python_sitelib}/%{pypi_name}
+%{python_sitelib}/%{pypi_name}-%{version}-py?.?.egg-info

@@ -16,7 +16,7 @@ BuildRequires:  locales
 BuildRequires:  python-devel
 BuildRequires:  python3dist(appdirs)
 BuildRequires:  python3dist(backports.os)
-BuildRequires:  python3dist(mock)
+3BuildRequires:  python3dist(mock)
 BuildRequires:  python3dist(nose)
 BuildRequires:  python3dist(psutil)
 BuildRequires:  python3dist(pyftpdlib)
@@ -27,16 +27,6 @@ BuildRequires:  python3dist(setuptools)
 BuildRequires:  python3dist(six)
 
 %description
-Work with files and directories in archives, memory, the cloud etc. as easily
-as your local drive. Write code now, decide later where the data will be
-stored; unit test without writing real files; upload files to the cloud
-without learning a new API; sandbox your file writing code; etc.
-
-%package -n     python-%{pypi_name}
-Summary:        %{summary}
-%{?python_provide:%python_provide python-%{pypi_name}}
-
-%description -n python-%{pypi_name}
 Work with files and directories in archives, memory, the cloud etc. as easily
 as your local drive. Write code now, decide later where the data will be
 stored; unit test without writing real files; upload files to the cloud
@@ -60,7 +50,7 @@ perl -pi -e 's/~=/>=/g' setup.py
 export LC_ALL=C.UTF-8
 #{__python} setup.py test
 
-%files -n python-%{pypi_name}
+%files
 %license LICENSE
 %doc README.md
 %{python_sitelib}/%{pypi_name}

@@ -16,7 +16,7 @@ BuildRequires:  locales
 BuildRequires:  python-devel
 BuildRequires:  python3dist(appdirs)
 BuildRequires:  python3dist(backports.os)
-3BuildRequires:  python3dist(mock)
+#BuildRequires:  python3dist(mock)
 BuildRequires:  python3dist(nose)
 BuildRequires:  python3dist(psutil)
 BuildRequires:  python3dist(pyftpdlib)

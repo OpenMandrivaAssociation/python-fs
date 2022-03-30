@@ -3,7 +3,7 @@
 
 Name:           python-%{pypi_name}
 Version:        2.4.11
-Release:        2
+Release:        3
 Summary:        Python's filesystem abstraction layer
 Group:          Development/Python
 License:        MIT
@@ -54,4 +54,4 @@ export LC_ALL=C.UTF-8
 %license LICENSE
 %doc README.md
 %{python_sitelib}/%{pypi_name}
-%{python_sitelib}/%{pypi_name}-%{version}-py?.?.egg-info
+%{python_sitelib}/%{pypi_name}-%{version}-py*.*.egg-info

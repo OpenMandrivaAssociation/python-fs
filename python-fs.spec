@@ -2,8 +2,8 @@
 %global pypi_name fs
 
 Name:           python-%{pypi_name}
-Version:        2.4.11
-Release:        3
+Version:        2.4.16
+Release:        1
 Summary:        Python's filesystem abstraction layer
 Group:          Development/Python
 License:        MIT

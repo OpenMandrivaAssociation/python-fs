@@ -3,7 +3,7 @@
 
 Name:           python-%{pypi_name}
 Version:        2.4.16
-Release:        3
+Release:        4
 Summary:        Python's filesystem abstraction layer
 Group:          Development/Python
 License:        MIT
